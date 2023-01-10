@@ -1,12 +1,24 @@
+.top-page{
+  display: flex;
+  justify-content: center;
+}
+
 .main-page-title{
-  text-align: center;
+  text-align: center; 
+  margin-top: 47px; 
+  margin-left: 5px;
+  font-size: 5vw;
+}
+
+.emblem{
+  width: 18vw;
 }
 
 
 
 /* display all articles */
 .articles-container {
-  padding: 20px;
+  padding: 15px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
@@ -14,33 +26,85 @@
 }
 
 
-
-
-
-
-
-
 /* article card */
+
 .article-card {
-  text-align: center;
-  border-radius: 0.5em;
-  border: 0;
-  margin: 0;
+  text-align: center;  
+  border: 3px solid black;
+  padding: 10px;
 }
 
 .card-btn {
-  border-color: black;
+  border-color: black; 
+  margin: 3px; 
+  border: none;
+}
+
+
+.card-btn:hover{
+  border: 1px solid black;
 }
 
 .article-image {
   width: 100%;
-  height: auto;
-  border-radius: 0.5em;
-  min-width: 200px;
-  max-width: 340px;
+  height: auto; 
+  /* min-width: 200px; */
+  max-width: 340px;  
 }
 
 .title {
   font-size: 25px;
   color: black;
+}
+
+/* Article Details */
+.details-article{
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.details-img{
+  width: 48vw;
+}
+
+.details-title, .details-author, .details-img, .details-summary{
+  text-align: center;
+  margin: 10px;
+}
+.details-summary{
+  margin: 20px;
+}
+
+
+/* Search Bar */
+.search-bar {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.userSearch{
+margin-right: 4px;
+margin-left: 4px;
+}
+
+@media only screen and (min-width:300px) and (max-width:675px) {
+  .details-img {
+    width: 80vw;
+  }
+  .emblem{
+    width: 35vw;
+  }
+  .details-title{
+    margin-bottom: 3px;
+  }
+
+.details-summary{
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
 }

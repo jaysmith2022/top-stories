@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function ArticleCard({ id, title, multimedia, section, url }) {
   return (
     <div className="article-card">
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <img
         className="article-image"
         alt={`image for ${title}`}

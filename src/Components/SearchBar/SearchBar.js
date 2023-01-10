@@ -39,8 +39,7 @@ function SearchBar({
 
   //setSections(newChoices);
   return (
-    <div>
-      <h1>SearchBar</h1>
+    <div className="search-bar">      
       <select
         className="dropdown-selection"
         name="genre"
@@ -53,7 +52,7 @@ function SearchBar({
       <input
         type="text"
         value={userSearch}
-        name="userSearch"
+        className="userSearch"
         placeholder="Search Articles"
         onChange={(event) => setUserSearch(event.target.value)}
       />
