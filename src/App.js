@@ -4,13 +4,15 @@ import { fetchAllArticles } from "./apiCalls";
 import { Switch, Route } from "react-router-dom";
 import ArticleContainer from "./Components/ArticleContainer/ArticleContainer";
 import ArticleDetails from "./Components/ArticleDetails/ArticleDetails";
+import SearchBar from "./Components/SearchBar/SearchBar";
 
 function App() {
-  const [articles, setArticles] = useState([]);
- // const[list, setList] = useState([])
+  const [articles, setArticles] = useState([]); 
   const [loading, setLoading] = useState("");
   const [error, setError] = useState("")  
-
+  const [sections, setSections] = useState("");
+  const [userSearch, setUserSearch] = useState("");
+  
  useEffect(() => {
    fetchAllArticles()
      .then((data) => {
@@ -18,10 +20,10 @@ function App() {
        const newData = data.results.map((result, index) => ({
          ...result,
          id: index + 1,
-       }));
-       setArticles(newData);
+       }));      
+       setArticles(newData);       
        console.log(newData);      
-       setLoading("");
+       setLoading("");            
      })
      .catch((error) => {
        setError(
@@ -39,19 +41,47 @@ const findArticle = (id) => {
   })
 }
 
+
+// const getSections = () => {
+//      console.log("run");
+//      const choices = articles.map((article) => {
+//        return article.section.toUpperCase();
+//      });
+//      const newChoices = [...new Set(choices)];
+//      setSections(newChoices);
+// };
+
+// useEffect(() => {
+//   console.log("run")
+//   const choices = articles.map((article) => {
+//     return article.section.toUpperCase();
+//   });
+//   const newChoices = [...new Set(choices)];
+//   setSections(newChoices);
+// }, []);
+
+// console.log(sections)
+
   return (
     <main>
       <h1 className="main-page-title">Top Stories</h1>
       <Switch>
         <Route exact path="/">
-          <ArticleContainer articles={articles} />
+          <SearchBar
+            articles={articles}
+            sections={sections}
+            setSections={setSections}
+            userSearch={userSearch}
+            setUserSearch={setUserSearch}
+          />
+          <ArticleContainer articles={articles} searchedCategory={sections} searchedArticle={userSearch}/>
         </Route>
         <Route
           exact
           path="/details/:id"
           render={({ match }) => {
             const chosenArticle = findArticle(match.params.id);
-            console.log(chosenArticle)
+            console.log(chosenArticle);
             return <ArticleDetails article={chosenArticle} />;
           }}
         />
