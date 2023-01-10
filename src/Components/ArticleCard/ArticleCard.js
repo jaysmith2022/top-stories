@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ArticleCard({ id, title, multimedia, section, url }) {
-  
   return (
     <div className="article-card">
       <h2>{title}</h2>
@@ -11,12 +11,13 @@ function ArticleCard({ id, title, multimedia, section, url }) {
         src={multimedia[1].url}
         onError={(e) => (e.target.src = "/NYT-emblem.jpeg")}
       />
+      <p>Section: {section}</p>
       <a href={url}>
-        <button className="card-btn" >
-          Link To Article
-        </button>
+        <button className="card-btn">Link To Article</button>
       </a>
-      <button className="card-btn">Learn More Here</button>
+      <Link to={`/details/${id}`}>
+        <button className="card-btn">Learn More Here</button>
+      </Link>
     </div>
   );
 }
