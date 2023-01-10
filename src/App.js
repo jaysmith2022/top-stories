@@ -6,8 +6,8 @@ import ArticleContainer from "./Components/ArticleContainer/ArticleContainer";
 import ArticleDetails from "./Components/ArticleDetails/ArticleDetails";
 
 function App() {
-  const [article, setArticle] = useState([]);
-  const[list, setList] = useState([])
+  const [articles, setArticles] = useState([]);
+ // const[list, setList] = useState([])
   const [loading, setLoading] = useState("");
   const [error, setError] = useState("")  
 
@@ -19,9 +19,8 @@ function App() {
          ...result,
          id: index + 1,
        }));
-       setList(newData);
-       console.log(newData);
-       console.log("list",list)
+       setArticles(newData);
+       console.log(newData);      
        setLoading("");
      })
      .catch((error) => {
@@ -32,34 +31,28 @@ function App() {
      });
      
  }, []);
-// useEffect(() => {
-//   fetchAllArticles().then((data) => {
-//     setArticle(data.results);
-//   });
-//   //console.log(data)
-//   console.log(article)
-// }, []);
-console.log("list 2", list);
+
+const findArticle = (id) => {
+  let numberId = parseInt(id)
+  return articles.find((article) => {
+   return article.id === numberId
+  })
+}
+
   return (
     <main>
       <h1 className="main-page-title">Top Stories</h1>
       <Switch>
         <Route exact path="/">
-          
-          <ArticleContainer articles={list} />
+          <ArticleContainer articles={articles} />
         </Route>
         <Route
           exact
           path="/details/:id"
           render={({ match }) => {
-            const chosenArticle = list.find(
-              (article) => article.id === match.params.id
-            );
-            return (
-              <ArticleDetails
-                article={chosenArticle}               
-              />
-            );
+            const chosenArticle = findArticle(match.params.id);
+            console.log(chosenArticle)
+            return <ArticleDetails article={chosenArticle} />;
           }}
         />
       </Switch>

@@ -12,7 +12,7 @@ function ArticleCard({ id, title, multimedia, section, url }) {
         onError={(e) => (e.target.src = "/NYT-emblem.jpeg")}
       />
       <p>Section: {section}</p>
-      <a href={url}>
+      <a href={url} target="_blank" rel="noopener noreferrer">
         <button className="card-btn">Link To Article</button>
       </a>
       <Link to={`/details/${id}`}>
