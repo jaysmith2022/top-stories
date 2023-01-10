@@ -1,8 +1,9 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import { fetchAllArticles } from "./apiCalls";
-import { Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import ArticleContainer from "./Components/ArticleContainer/ArticleContainer";
+import ArticleDetails from "./Components/ArticleDetails/ArticleDetails";
 
 function App() {
   const [article, setArticle] = useState([]);
@@ -39,11 +40,29 @@ function App() {
 //   console.log(article)
 // }, []);
 console.log("list 2", list);
-  return (    
-    
+  return (
     <main>
       <h1 className="main-page-title">Top Stories</h1>
-     <ArticleContainer articles={list}/>
+      <Switch>
+        <Route exact path="/">
+          
+          <ArticleContainer articles={list} />
+        </Route>
+        <Route
+          exact
+          path="/details/:id"
+          render={({ match }) => {
+            const chosenArticle = list.find(
+              (article) => article.id === match.params.id
+            );
+            return (
+              <ArticleDetails
+                article={chosenArticle}               
+              />
+            );
+          }}
+        />
+      </Switch>
     </main>
   );
 }
