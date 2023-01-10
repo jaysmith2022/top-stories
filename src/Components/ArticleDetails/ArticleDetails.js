@@ -1,6 +1,6 @@
 import React from "react";
 
-function ArticleDetails({ article}) {
+function ArticleDetails({article}) {
   const displayArticle = (articleInfo) => {
     const { title, abstract, byline, published_date, section, url } =
       articleInfo;
@@ -11,11 +11,11 @@ function ArticleDetails({ article}) {
     
     return (
       <article className="details-article">
-        <h2>{title}</h2>
-        <h3>{byline}</h3>
+        <h2 className="details-title">{title}</h2>
+        <h4 className="details-author">{byline}</h4>
         <img className="details-img" src={imgUrl} alt={`Image for ${title}`} />
         <h4>Published on {publishedDate}</h4>       
-        <p>"{displaySummary}"</p>
+        <p className="details-summary">"{displaySummary}"</p>
         <p>
           <a href="/">
             <button className="detail-btn">Return Home</button>
