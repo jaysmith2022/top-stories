@@ -38,7 +38,13 @@ function App() {
   return (
     <main>
       <div className="top-page">
-        <img className="emblem" src="/emblem.jpg"></img>
+        <a href="/">
+          <img
+            className="emblem"
+            src="/emblem.jpg"
+            alt="new york times emblem"
+          ></img>
+        </a>
         <h1 className="main-page-title">Top Stories</h1>
       </div>
 
