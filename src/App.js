@@ -8,28 +8,23 @@ import SearchBar from "./Components/SearchBar/SearchBar";
 
 function App() {
   const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState("");
   const [error, setError] = useState("");
   const [sections, setSections] = useState("");
   const [userSearch, setUserSearch] = useState("");
 
   useEffect(() => {
     fetchAllArticles()
-      .then((data) => {
-        console.log("data", data);
+      .then((data) => {        
         const newData = data.results.map((result, index) => ({
           ...result,
           id: index + 1,
         }));
         setArticles(newData);
-        console.log(newData);
-        setLoading("");
       })
       .catch((error) => {
         setError(
           `Uh oh, that's a ${error.message}! Something went wrong loading our articles... please refresh or try again later.`
         );
-        setLoading("");
       });
   }, []);
 
@@ -39,26 +34,6 @@ function App() {
       return article.id === numberId;
     });
   };
-
-  // const getSections = () => {
-  //      console.log("run");
-  //      const choices = articles.map((article) => {
-  //        return article.section.toUpperCase();
-  //      });
-  //      const newChoices = [...new Set(choices)];
-  //      setSections(newChoices);
-  // };
-
-  // useEffect(() => {
-  //   console.log("run")
-  //   const choices = articles.map((article) => {
-  //     return article.section.toUpperCase();
-  //   });
-  //   const newChoices = [...new Set(choices)];
-  //   setSections(newChoices);
-  // }, []);
-
-  // console.log(sections)
 
   return (
     <main>
@@ -80,6 +55,7 @@ function App() {
             articles={articles}
             searchedCategory={sections}
             searchedArticle={userSearch}
+            error={error}
           />
         </Route>
         <Route
@@ -87,7 +63,6 @@ function App() {
           path="/details/:id"
           render={({ match }) => {
             const chosenArticle = findArticle(match.params.id);
-            console.log(chosenArticle);
             return <ArticleDetails article={chosenArticle} />;
           }}
         />
