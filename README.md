@@ -12,7 +12,7 @@ Browse a selection of articles from the New York Times top stories section.
 - [Highlights](#Highlights)
 - [Technologies](#Technologies)
 - [Links](#Links)
-- [ScreenShots](#ScreenShots)
+- [Screen Shots](#Screen-Shots)
 - [Getting Started](#GETTING-STARTED)
 - [Contributors](#Contributors)
 - [Future Directions](#Future-Directions)
@@ -22,6 +22,7 @@ Browse a selection of articles from the New York Times top stories section.
 
 This was a final solo take home project assigned fromt the Turing School of Software and Design front-end engineering program. The goals of this solo project were to:
 
+* Complete within an 8 hour time period
 * Display competency with React fundamentals
 * Create a multi-page UX using Router
 * Test React components & asynchronous JS with Cypress
@@ -45,8 +46,15 @@ This was a final solo take home project assigned fromt the Turing School of Soft
 Deployed Project: 
 Deployed using ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-### Videos
-
+### Screen Shots
+<div align="center">
+  <h3>WireFrame</h3>
+  <img src="https://user-images.githubusercontent.com/106141130/211920983-b1483d94-70b9-4763-806b-b7a9d5909125.png" alt="phone-view-home" width="350"/>  
+  <h3>React Component Architecture</h3>
+  <img src="https://user-images.githubusercontent.com/106141130/211920822-b76e6588-080a-48e5-a476-7f08efe9f7d1.png" alt="phone-view-home" width="350"/>
+  <h3>Screen Shots & GIFs</h3>
+  
+ </div>
 
 ![lb2]()
 
