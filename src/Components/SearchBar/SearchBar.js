@@ -1,45 +1,34 @@
 import React from "react";
-import { useState } from "react";
 
-function SearchBar({
-  articles,
-  sections,
-  setSections,
-  userSearch,
-  setUserSearch,
-}) {
+function SearchBar({ articles, setSections, userSearch, setUserSearch }) {
   const choices = articles.map((article) => {
     return article.section.toUpperCase();
   });
 
   const newChoices = [...new Set(choices)];
-  console.log(newChoices);
+  
 
   const displaySections = () => {
-    let categoryData
+    let categoryData;
     if (!articles) {
       return <option disabled> loading activity options</option>;
-    } else {
-      console.log("yes")
-     return categoryData = newChoices.map((choice) => {
-      return (
+    } else {    
+      return (categoryData = newChoices.map((choice) => {
+        return (
           <option key={choice} value={choice}>
             {choice}
           </option>
-      )     
-      });
+        );
+      }));
     }
-    
-  }
-  const clearSelections = (event) => {
-    //event.preventDefault();
-    setSections("")
-    setUserSearch("")
-  }
+  };
+  const clearSelections = () => {
+    setSections("");
+    setUserSearch("");
+  };
 
-  //setSections(newChoices);
   return (
-    <div className="search-bar">      
+    <div className="search-bar">
       <select
         className="dropdown-selection"
         name="genre"
