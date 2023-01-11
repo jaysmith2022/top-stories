@@ -43,13 +43,13 @@ This was a final solo take home project assigned fromt the Turing School of Soft
 
 
 ## Links
-Deployed Project: 
+ Deployed Project: [Top Stories](https://top-stories-five.vercel.app/)
 Deployed using ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
 ### Screen Shots
 <div align="center">
   <h3>WireFrame</h3>
-  <img src="https://user-images.githubusercontent.com/106141130/211920983-b1483d94-70b9-4763-806b-b7a9d5909125.png" alt="phone-view-home" width="350"/>  
+  <img src="https://user-images.githubusercontent.com/106141130/211920983-b1483d94-70b9-4763-806b-b7a9d5909125.png" alt="phone-view-home" width="450"/>  
   <h3>React Component Architecture</h3>
   <img src="https://user-images.githubusercontent.com/106141130/211920822-b76e6588-080a-48e5-a476-7f08efe9f7d1.png" alt="phone-view-home" width="350"/>
   <h3>Screen Shots & GIFs</h3>
