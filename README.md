@@ -82,4 +82,4 @@ Hazel Pablo - pablohj08@gmail.com - [LinkedIn](https://www.linkedin.com/in/hazel
 
 
 ### Future Directions
-*
+* Add Api Calls to other sections of the New York Times
