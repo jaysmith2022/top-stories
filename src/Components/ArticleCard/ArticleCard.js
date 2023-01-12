@@ -8,8 +8,7 @@ function ArticleCard({ id, title, multimedia, section, url }) {
       <img
         className="article-image"
         alt={`image for ${title}`}
-        src={multimedia[1].url}
-        onError={(e) => (e.target.src = "/NYT-emblem.jpeg")}
+        src={!multimedia ? "/logo.jpeg" : multimedia[2].url}        
       />
       <p>Section: {section}</p>
       <a href={url} target="_blank" rel="noopener noreferrer">
