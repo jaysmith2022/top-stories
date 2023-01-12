@@ -2,7 +2,7 @@
   <h2 align="center">Top Stories</h2>
 
   <h4 align="center">
-   Need help reading New york times top stories?
+   Need help reading New York Times top stories?
   </h4>
 
 Browse a selection of articles from the New York Times top stories section. 
@@ -53,10 +53,11 @@ Deployed using ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style
   <h3>React Component Architecture</h3>
   <img src="https://user-images.githubusercontent.com/106141130/211920822-b76e6588-080a-48e5-a476-7f08efe9f7d1.png" alt="phone-view-home" width="350"/>
   <h3>Screen Shots & GIFs</h3>
-  
+  <img src="https://user-images.githubusercontent.com/106141130/211925724-eef69ac9-8176-46da-8cca-9e247bcfb30f.gif" alt="phone-view-home" width="475"/>
  </div>
 
-![lb2]()
+
+
 
 
 
