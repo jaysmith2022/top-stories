@@ -25,7 +25,6 @@ This was a final solo take home project assigned fromt the Turing School of Soft
 * Complete within an 8 hour time period
 * Display competency with React fundamentals
 * Create a multi-page UX using Router
-* Test React components & asynchronous JS with Cypress
 * Practicing refactoring 
 
 ## Features:
