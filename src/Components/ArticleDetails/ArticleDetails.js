@@ -5,7 +5,7 @@ function ArticleDetails({ article }) {
     const { title, abstract, byline, published_date, url } =
       articleInfo;
     const displaySummary = abstract ? abstract : "No summary provided.";
-    const imgUrl = article.multimedia[1].url;
+    const imgUrl = !article.multimedia ? "/logo.jpeg" : article.multimedia[1].url
     const publishedDates = published_date.split("T")[0].split("-");
     const publishedDate = `${publishedDates[1]}/${publishedDates[2]}/${publishedDates[0]}`;
 
