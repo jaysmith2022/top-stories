@@ -3,6 +3,7 @@
 
   <h4 align="center">
    Need help reading New York Times top stories?
+   [Deployed Link](https://top-stories-five.vercel.app/)
   </h4>
 
 Browse a selection of articles from the New York Times top stories section. 
