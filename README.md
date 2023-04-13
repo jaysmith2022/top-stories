@@ -49,38 +49,24 @@ Deployed using ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style
 ### Screen Shots
 <div align="center">
   <h3>WireFrame</h3>
-  <img src="https://user-images.githubusercontent.com/106141130/211920983-b1483d94-70b9-4763-806b-b7a9d5909125.png" alt="phone-view-home" width="450"/>  
+   ![Screen Shot 2023-04-13 at 12 30 45 PM](https://user-images.githubusercontent.com/107894408/231851775-0efa1adf-1597-4b6d-8775-6317aff7d45c.png)
   <h3>React Component Architecture</h3>
-  <img src="https://user-images.githubusercontent.com/106141130/211920822-b76e6588-080a-48e5-a476-7f08efe9f7d1.png" alt="phone-view-home" width="350"/>
+  <img width="1009" alt="Screen Shot 2023-04-13 at 12 30 17 PM" src="https://user-images.githubusercontent.com/107894408/231851832-14007dfd-33f1-429e-b25c-ab71f4c2c637.png">
   <h3>Screen Shots & GIFs</h3>
-  <img src="https://user-images.githubusercontent.com/106141130/211925724-eef69ac9-8176-46da-8cca-9e247bcfb30f.gif" alt="phone-view-home" width="475"/>
+https://user-images.githubusercontent.com/107894408/231851888-b846cbdc-acf0-4c0e-b91b-391c6b6bb060.mp4
  </div>
-
-
-
-
-
 
 
  
 ## GETTING STARTED
 
 ### Installation
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-1. Fork this Repo
-2. Clone it down to your machine
-3. cd into the root of the project directory
-4. Run `npm install`
-5. To verify that it is setup correctly, run `npm start` in your terminal to start the local server. This runs the app in the development mode. Open http://localhost:3000 to view it in your browser.
-6. See the section about [deployment](https://create-react-app.dev/docs/deployment/) for more information.
-7. Enter `Ctrl + C` in your terminal to stop the local server at any time.
 
 
-## Contributors
 
-Hazel Pablo - pablohj08@gmail.com - [LinkedIn](https://www.linkedin.com/in/hazel-pablo-704779245/) - [GitHub](https://github.com/Hpablo08)
 
 
 ### Future Directions
 * Add Cypress Testing
 * Add Api Calls to other sections of the New York Times
+* Add Typescript
